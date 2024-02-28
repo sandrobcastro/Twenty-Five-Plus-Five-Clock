@@ -1,13 +1,13 @@
 export interface DisplayState {
     time: number;
-    timetype: "session" | "break";
-    timeRunning: boolean;
-}
-
-export const fomartTime = (time: number): string => {
+    timeType: "Session" | "Break";
+    timerRunning: boolean;
+  }
+  
+  export const formatTime = (time: number): string => {
     const minutes = Math.floor(time / 60);
     const seconds = time % 60;
     return `${minutes < 10 ? "0" + minutes.toString() : minutes}:${
-        seconds < 10 ? "0" + seconds.toString() : seconds
-      }`;
-    };
+      seconds < 10 ? "0" + seconds.toString() : seconds
+    }`;
+  };
